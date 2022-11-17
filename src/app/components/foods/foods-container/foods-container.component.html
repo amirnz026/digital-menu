@@ -1,0 +1,15 @@
+<div class="container">
+  <div *ngFor="let item of foods$ | async">
+    <app-food-item
+      price="{{ item.price }}"
+      title="{{ item.title }}"
+      [ingredients]="item.ingredients"
+      foodId="{{ item.id }}"
+      discountPrice="{{ item.discountPrice }}"
+      [imgSrc]="item.imgSrc"
+      [quantity]="item.qty"
+      [isAddedToCart]="item.isAddedToCart"
+      [categories]="item.categories"
+    ></app-food-item>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+* {
+  font-family: Vazir, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.btn-primary {
+  border: 1px solid #990100;
+  color: #990100;
+  border-radius: 0.4rem;
+  text-align: center;
+  width: 2rem;
+  font-size: 1.15em;
+  cursor: pointer;
+  font-weight: 600;
+}/*# sourceMappingURL=styles.css.map */

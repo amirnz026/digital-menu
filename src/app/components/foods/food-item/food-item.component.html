@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="text-details" (click)="onItemClick()">
+    <div>
+      <p class="title">{{ toPersianNumeral(title) }}</p>
+      <div class="ingredients-container" *ngIf="ingredients.length > 1">
+        <p *ngFor="let ingredient of ingredients">
+          {{ toPersianNumeral(ingredient) }}<span>،</span>
+        </p>
+      </div>
+    </div>
+    <div
+      class="price-container"
+      *ngIf="discountPrice === price; else discountBlock"
+    >
+      <div class="price">
+        {{ toPersianNumeral(price) }}
+      </div>
+      <span> تومان </span>
+    </div>
+    <ng-template #discountBlock>
+      <div class="discount-container">
+        <div class="discount-price">
+          <span class="discount-price-number">
+            {{ toPersianNumeral(discountPrice) }}
+          </span>
+          <span> تومان </span>
+          <div class="off-container">
+            <span class="off-percentage">
+              {{ toPersianNumeral(discountPercentage) }}٪
+            </span>
+          </div>
+        </div>
+        <div class="main-price">
+          <span class="main-price-number">
+            {{ toPersianNumeral(price) }}
+          </span>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  <div class="image-details">
+    <img [src]="imgSrc[0]" (click)="onItemClick()" alt="" />
+    <div *ngIf="itemQty$ | async as itemQty; else loggedOut">
+      <div *ngIf="itemQty > 0; else loggedOut">
+        <div class="add-remove-quantity-container">
+          <div (click)="addQuantity()">+</div>
+          <p class="quantity">{{ toPersianNumeral(itemQty) }}</p>
+          <div
+            (click)="removeQuantity()"
+            [ngClass]="{ inactive: itemQty === 0 }"
+          >
+            -
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #loggedOut>
+      <button (click)="addQuantity()">اضافه به سبد</button></ng-template
+    >
+  </div>
+</div>

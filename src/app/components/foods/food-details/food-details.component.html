@@ -1,0 +1,86 @@
+<div class="overlay" (click)="handleClose()"></div>
+
+<div class="container">
+  <div class="header">
+    <p>جزییات بیشتر</p>
+    <i class="bx bx-chevron-down" (click)="handleClose()"></i>
+  </div>
+  <div class="image-slider-container">
+    <div class="left-arrow" (click)="leftClick()" *ngIf="imgSrc.length > 1">
+      <i class="bx bx-chevron-left"></i>
+    </div>
+    <img [src]="imgSrc[slideIndex]" alt="food" />
+    <div class="right-arrow" (click)="rightClick()" *ngIf="imgSrc.length > 1">
+      <i class="bx bx-chevron-right"></i>
+    </div>
+  </div>
+  <p class="title">{{ toPersianNumeral(title) }}</p>
+
+  <div class="ingredients-container">
+    <ng-container
+      *ngFor="let ingredient of ingredients"
+      class="ingredients-container"
+    >
+      <p class="ingredients" *ngIf="ingredients.length > 1">
+        {{ toPersianNumeral(ingredient) }} <span>- &nbsp;</span>
+      </p>
+    </ng-container>
+  </div>
+
+  <hr />
+
+  <div class="price-container">
+    <!-- <p class="price">
+      <span>{{ toPersianNumeral(price) }}</span> تومان
+    </p> -->
+
+    <div
+      class="price-holder"
+      *ngIf="discountPrice === price; else discountBlock"
+    >
+      <div class="price">
+        {{ toPersianNumeral(price) }}
+      </div>
+      <span> تومان </span>
+    </div>
+    <ng-template #discountBlock>
+      <div class="discount-container">
+        <div class="discount-price">
+          <span class="discount-price-number">
+            {{ toPersianNumeral(discountPrice) }}
+          </span>
+          <span> تومان </span>
+          <div class="off-container">
+            <span class="off-percentage">
+              {{ toPersianNumeral(discountPercentage) }}٪
+            </span>
+          </div>
+        </div>
+        <div class="main-price">
+          <span class="main-price-number">
+            {{ toPersianNumeral(price) }}
+          </span>
+        </div>
+      </div>
+    </ng-template>
+
+    <div class="add-remove-quantity-container">
+      <div (click)="addQuantity()" class="btn">+</div>
+      <p>{{ toPersianNumeral(qty) }}</p>
+      <div>
+        <div *ngIf="qty; else activeBtn">
+          <div
+            (click)="removeQuantity()"
+            [ngClass]="{ inactive: qty === 0 }"
+            class="btn"
+          >
+            -
+          </div>
+        </div>
+        <ng-template #activeBtn>
+          <div class="btn inactive">-</div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

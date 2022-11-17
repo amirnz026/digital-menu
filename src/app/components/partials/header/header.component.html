@@ -1,0 +1,39 @@
+<!-- <div class="nav-container">
+  <i class="bx bx-chevron-right"></i>
+  <ul class="grid">
+    <li
+      [style.order]="coffeeShopOrder"
+      [ngClass]="{ active: coffeeShopOrder === 2 }"
+      (click)="handleClick('coffeeShop')"
+    >
+      کافی شاپ
+    </li>
+    <li
+      [style.order]="restaurantOrder"
+      [ngClass]="{ active: restaurantOrder === 2 }"
+      (click)="handleClick('restaurant')"
+    >
+      رستوران
+    </li>
+    <li
+      [style.order]="fastFoodOrder"
+      [ngClass]="{ active: fastFoodOrder === 2 }"
+      (click)="handleClick('fastFood')"
+    >
+      فست فود
+    </li>
+  </ul>
+  <i class="bx bx-chevron-left"></i>
+</div> -->
+
+<div class="nav-container">
+  <ul class="grid">
+    <li
+      [style.order]="fastFoodOrder"
+      [ngClass]="{ active: fastFoodOrder === 2 }"
+      class="active"
+    >
+      پیتزا یاقوت
+    </li>
+  </ul>
+</div>

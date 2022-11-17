@@ -1,0 +1,14 @@
+<form class="container" action="">
+  <input
+    placeholder="غذای مورد نظر خود را جستجو کنید"
+    (input)="handleChange(userInput.value)"
+    enterkeyhint="go"
+    #userInput
+  />
+
+  <i class="bx bx-search-alt" (click)="handleClick(userInput.value)"></i>
+  <button
+    (click)="handleClick(userInput.value)"
+    style="background-color: red"
+  ></button>
+</form>

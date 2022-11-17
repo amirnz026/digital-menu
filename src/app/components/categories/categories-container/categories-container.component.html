@@ -1,0 +1,14 @@
+<div class="main-container">
+  <div class="categories">
+    <app-category-item
+      title="همه"
+      imgSrc="../../../../assets/icons/all.png"
+    ></app-category-item>
+    <div *ngFor="let category of categories$ | async">
+      <app-category-item
+        title="{{ category.title }}"
+        imgSrc="{{ category.imgSrc }}"
+      ></app-category-item>
+    </div>
+  </div>
+</div>

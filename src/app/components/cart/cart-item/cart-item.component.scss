@@ -1,0 +1,133 @@
+@import "../../../../styles.scss";
+
+.container {
+  display: flex;
+  border-radius: 0.3rem;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+
+  .img-holder {
+    flex: 1;
+    img {
+      flex: 1;
+      width: 100%;
+      height: 100px;
+      object-fit: contain;
+      background-color: white;
+      border-radius: 0.3rem;
+    }
+  }
+
+  .text-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      font-size: 1.1em;
+      font-weight: 700;
+    }
+    .price {
+      color: $secondary-color;
+      span {
+        font-weight: 600;
+        font-size: 1em;
+      }
+    }
+    .price-container {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+      color: $secondary-color;
+
+      .price {
+        font-weight: 600;
+        font-size: 1.3em;
+        text-align: center;
+      }
+    }
+    .discount-container {
+      display: flex;
+      flex-direction: column;
+
+      .main-price {
+        display: flex;
+        gap: 0.25rem;
+        align-items: center;
+        color: #a3a3a3;
+        text-decoration: line-through #a3a3a39c;
+
+        .main-price-number {
+          font-weight: 300;
+          font-size: 1em;
+        }
+      }
+      .discount-price {
+        display: flex;
+        gap: 0.25rem;
+        align-items: center;
+        color: $secondary-color;
+        .discount-price-number {
+          font-weight: 600;
+          font-size: 1.3em;
+          text-align: center;
+        }
+      }
+    }
+
+    .off-container {
+      .off-percentage {
+        color: white;
+        font-size: 0.8em;
+        text-align: center;
+        margin-right: 0.1rem;
+        background-color: $off-percentage;
+        border-radius: 0.5rem;
+        padding: 0rem 0.3rem;
+      }
+    }
+  }
+
+  .last-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3rem;
+    height: 100%;
+    justify-content: center;
+    i {
+      font-size: 2rem;
+      color: $icon-black;
+    }
+  }
+  .add-remove-quantity-container {
+    flex: 1;
+  }
+}
+
+.add-remove-quantity-container {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    @extend .btn-primary;
+  }
+
+  p {
+    font-weight: 500;
+    width: 1rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .inactive {
+    color: $minus-gray;
+    border: 1px solid $minus-gray;
+  }
+}
+
+.bx-x {
+  cursor: pointer;
+}

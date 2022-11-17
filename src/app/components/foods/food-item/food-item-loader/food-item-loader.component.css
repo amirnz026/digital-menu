@@ -1,0 +1,117 @@
+* {
+  font-family: Vazir, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.btn-primary {
+  border: 1px solid #990100;
+  color: #990100;
+  border-radius: 0.4rem;
+  text-align: center;
+  width: 2rem;
+  font-size: 1.15em;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  background-color: #ededed;
+  border-radius: 0.3rem;
+  height: 11rem;
+  padding: 0 1rem;
+  border: 1px solid #d8d8d8;
+}
+.container .text-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container .text-details .title {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  width: 8rem;
+  height: 1.7rem;
+  border-radius: 0.3rem;
+  -webkit-animation: pulseAnim infinite 0.8s;
+          animation: pulseAnim infinite 0.8s;
+}
+.container .text-details .ingredients-container {
+  display: flex;
+  width: 5rem;
+  height: 1.3rem;
+  border-radius: 0.3rem;
+  -webkit-animation: pulseAnim infinite 0.8s;
+          animation: pulseAnim infinite 0.8s;
+}
+
+.price-container {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+.price-container .price {
+  display: inline-block;
+  width: 4rem;
+  height: 1.8rem;
+  border-radius: 0.3rem;
+  -webkit-animation: pulseAnim infinite 0.8s;
+          animation: pulseAnim infinite 0.8s;
+}
+
+.image-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.8rem;
+}
+.image-details .img {
+  display: inline-block;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 0.3rem;
+  border-radius: 0.3rem;
+  -webkit-animation: pulseAnim infinite 0.8s;
+          animation: pulseAnim infinite 0.8s;
+}
+.image-details .add-remove-quantity-container {
+  display: inline-block;
+  width: 7rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  -webkit-animation: pulseAnim infinite 0.8s;
+          animation: pulseAnim infinite 0.8s;
+}
+
+@-webkit-keyframes pulseAnim {
+  0% {
+    background-color: rgb(223, 223, 223);
+  }
+  50% {
+    background-color: rgb(213, 213, 213);
+  }
+  100% {
+    background-color: rgb(223, 223, 223);
+  }
+}
+
+@keyframes pulseAnim {
+  0% {
+    background-color: rgb(223, 223, 223);
+  }
+  50% {
+    background-color: rgb(213, 213, 213);
+  }
+  100% {
+    background-color: rgb(223, 223, 223);
+  }
+}/*# sourceMappingURL=food-item-loader.component.css.map */

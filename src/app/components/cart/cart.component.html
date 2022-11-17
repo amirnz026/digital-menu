@@ -1,0 +1,59 @@
+<div class="overlay" (click)="handleClose()"></div>
+
+<div class="container" *ngIf="qtySum$ | async as qtySum; else noCartBlock">
+  <div class="header">
+    <p>سبد خرید ({{ toPersianNumeral(qtySum) }})</p>
+    <i class="bx bx-chevron-down" (click)="handleClose()"></i>
+  </div>
+  <div class="empty-cart-container">
+    <p>خالی کردن سبد</p>
+    <i class="bx bx-x" (click)="handleRecycleClick()"></i>
+  </div>
+  <div class="items-container">
+    <div *ngFor="let item of itemsInCart$ | async" class="cart-items-container">
+      <app-cart-item
+        foodTitle="{{ item.title }}"
+        price="{{ item.price }}"
+        discountPrice="{{ item.discountPrice }}"
+        foodQty="{{ item.qty }}"
+        foodId="{{ item.id }}"
+        imgSrc="{{ item.imgSrc }}"
+      ></app-cart-item>
+    </div>
+  </div>
+  <textarea
+    class="order-description"
+    type="text"
+    placeholder="توضیحات سفارش"
+  ></textarea>
+  <div class="receipt">
+    <div class="right">
+      <p class="all">مبلغ سفارش</p>
+      <p>مالیات</p>
+      <p>سرویس</p>
+    </div>
+    <div class="left">
+      <p class="receipt-price all">
+        <span>{{ toPersianNumeral(totalOrderPrice$ | async) }}</span
+        >تومان
+      </p>
+      <p class="receipt-price"><span>۳۰۰۰۰</span>تومان</p>
+      <p class="receipt-price"><span>۵۰۰۰۰</span>تومان</p>
+    </div>
+  </div>
+</div>
+
+<!-- empty cart -->
+<ng-template #noCartBlock>
+  <div class="container">
+    <div class="header">
+      <p>سبد خرید (۰)</p>
+      <i class="bx bx-chevron-down" (click)="handleClose()"></i>
+    </div>
+    <div class="no-cart-container">
+      <i class="bx bx-cart-add"></i>
+      <p>سبد خرید شما خالی است</p>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</ng-template>

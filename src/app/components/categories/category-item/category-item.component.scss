@@ -1,0 +1,57 @@
+@import "../../../../styles.scss";
+.container {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  width: 5.5rem;
+  background-color: $category-gray;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+
+  img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+  }
+
+  p {
+    color: $secondary-color;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-weight: 400;
+  }
+}
+.active {
+  // height: 8rem;
+  // width: 5.9rem;
+  position: relative;
+  animation: activeCatAnim 0.2s forwards;
+  p {
+    font-weight: 600;
+  }
+
+  .upper-bar {
+    position: absolute;
+    background-color: $secondary-color;
+    top: 0;
+    border-radius: 0.3rem 0.3rem 0 0;
+    width: 100%;
+    height: 0.55rem;
+  }
+}
+
+@keyframes activeCatAnim {
+  0% {
+    height: 7rem;
+    width: 5.5rem;
+  }
+  100% {
+    height: 8rem;
+    width: 5.9rem;
+  }
+}

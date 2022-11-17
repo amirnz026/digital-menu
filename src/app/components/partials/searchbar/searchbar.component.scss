@@ -1,0 +1,32 @@
+@import "../../../../styles.scss";
+.container {
+  background-color: $gray-dark;
+  margin: 0.5rem auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.3rem;
+  width: 100%;
+  max-width: 1200px;
+
+  input {
+    color: $gray-text;
+    border: none;
+    background-color: $gray-dark;
+    width: 17rem;
+    outline: none;
+    font-size: 1em;
+    width: 100%;
+  }
+
+  i {
+    font-size: 1.5em;
+    color: $gray-text;
+    cursor: pointer;
+  }
+  button {
+    visibility: none;
+    opacity: 0;
+  }
+}

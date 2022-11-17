@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="img-holder">
+    <img [src]="imgSrc" alt="" />
+  </div>
+  <div class="text-details">
+    <p>{{ foodTitle }}</p>
+    <div
+      class="price-container"
+      *ngIf="price === discountPrice; else discountBlock"
+    >
+      <div class="price">
+        {{ toPersianNumeral(price) }}
+      </div>
+      <span> تومان </span>
+    </div>
+    <ng-template #discountBlock>
+      <div class="discount-container">
+        <div class="discount-price">
+          <span class="discount-price-number">
+            {{ toPersianNumeral(discountPrice) }}
+          </span>
+          <span> تومان </span>
+          <div class="off-container">
+            <span class="off-percentage">
+              {{ toPersianNumeral(discountPercentage) }}٪
+            </span>
+          </div>
+        </div>
+        <div class="main-price">
+          <span class="main-price-number">
+            {{ toPersianNumeral(price) }}
+          </span>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+
+  <div class="last-column">
+    <i class="bx bx-x" (click)="emptyCartItemById()"></i>
+
+    <div class="add-remove-quantity-container">
+      <div (click)="addQuantity()" class="btn">+</div>
+      <p>{{ toPersianNumeral(itemQty$ | async) }}</p>
+      <div>
+        <div *ngIf="itemQty$ | async as itemQty; else activeBtn">
+          <div
+            (click)="removeQuantity()"
+            [ngClass]="{ inactive: itemQty === 0 }"
+            class="btn"
+          >
+            -
+          </div>
+        </div>
+        <ng-template #activeBtn>
+          <div class="btn inactive">-</div>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

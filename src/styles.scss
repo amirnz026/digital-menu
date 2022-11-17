@@ -1,0 +1,36 @@
+$primary-color: #990100;
+$secondary-color: #008484;
+$white: #f6f6f6;
+$gray-dark: #e3e3e3;
+$gray-light: #ededed;
+$gray-text: #797979;
+$icon-black: #2c2c2c;
+$category-gray: #ededed;
+$ingredients-gray: #797979;
+$title-gray: #2c2c2c;
+$item-border: #d8d8d8;
+$minus-gray: #797979;
+$cart-gray: #ededed;
+$call-waiter: #ffdd7c;
+$off-percentage: #ef394e;
+* {
+  font-family: Vazir, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.btn-primary {
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  border-radius: 0.4rem;
+  text-align: center;
+  width: 2rem;
+  font-size: 1.15em;
+  cursor: pointer;
+  font-weight: 600;
+}

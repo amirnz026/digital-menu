@@ -1,0 +1,53 @@
+<app-splash
+  *ngIf="isSplashShowing"
+  (splashPersianEmit)="changeSplashScreenStatus()"
+></app-splash>
+
+<app-succeed-page *ngIf="isSucceeded"></app-succeed-page>
+
+<app-call-waiter *ngIf="!isSucceeded && !isSplashShowing"></app-call-waiter>
+
+<div class="page-container" *ngIf="!isSplashShowing">
+  <div *ngIf="!isSucceeded">
+    <div class="header-container">
+      <app-header></app-header>
+      <app-searchbar></app-searchbar>
+
+      <app-categories-container
+        *ngIf="
+          (categories$ | async | keyvalue)?.length;
+          else loadingCategoriesContainer
+        "
+      ></app-categories-container>
+      <ng-template #loadingCategoriesContainer>
+        <app-categories-container-loader></app-categories-container-loader>
+      </ng-template>
+    </div>
+
+    <app-foods-container
+      *ngIf="(foods$ | async | keyvalue)?.length; else loadingItemsContainer"
+    ></app-foods-container>
+    <ng-template #loadingItemsContainer>
+      <app-foods-container-loader></app-foods-container-loader>
+    </ng-template>
+
+    <ng-container *ngIf="itemDetailsShown$ | async as item">
+      <app-food-details
+        title="{{ item.title }}"
+        price="{{ item.price }}"
+        [imgSrc]="item.imgSrc"
+        foodId="{{ item.id }}"
+        [ingredients]="item.ingredients"
+        [qty]="item.qty"
+        discountPrice="{{ item.discountPrice }}"
+      ></app-food-details>
+    </ng-container>
+
+    <app-cart *ngIf="isCartShown$ | async"></app-cart>
+  </div>
+
+  <app-footer *ngIf="isTransactionFooter"></app-footer>
+  <app-footer-menu *ngIf="isMenuFooter"></app-footer-menu>
+  <app-footer-submit *ngIf="isSubmitFooter"></app-footer-submit>
+  <app-footer-pending *ngIf="isPending"></app-footer-pending>
+</div>

@@ -1,0 +1,127 @@
+* {
+  font-family: Vazir, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.btn-primary {
+  border: 1px solid #990100;
+  color: #990100;
+  border-radius: 0.4rem;
+  text-align: center;
+  width: 2rem;
+  font-size: 1.15em;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  background-color: #ededed;
+  border-radius: 0.3rem;
+  height: 11rem;
+  padding: 0 1rem;
+  border: 1px solid #d8d8d8;
+  cursor: pointer;
+}
+.container .text-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container .text-details .title {
+  color: #2c2c2c;
+  font-weight: 700;
+  font-size: 1.18em;
+  margin-bottom: 0.35rem;
+}
+.container .text-details .ingredients-container {
+  display: flex;
+  flex-wrap: wrap;
+  color: #797979;
+  font-weight: 300;
+  gap: 0 0.5rem;
+  font-size: 0.9em;
+}
+
+.price-container {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: #008484;
+}
+.price-container .price {
+  font-weight: 600;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.image-details {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0.8rem;
+}
+.image-details img {
+  width: 7rem;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.3rem;
+}
+.image-details .add-remove-quantity-container {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.image-details .add-remove-quantity-container div {
+  border: 1px solid #990100;
+  color: #990100;
+  border-radius: 0.4rem;
+  text-align: center;
+  width: 2rem;
+  font-size: 1.15em;
+  cursor: pointer;
+  font-weight: 600;
+}
+.image-details .add-remove-quantity-container .quantity {
+  width: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+}
+.image-details .add-remove-quantity-container .inactive {
+  color: #797979;
+  border: 1px solid #797979;
+}
+.image-details button {
+  background-color: #990100;
+  color: #f6f6f6;
+  border: none;
+  padding: 0.3rem 0.7rem;
+  width: 7rem;
+  border-radius: 0.2rem;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: #000000 -0.1rem 0.1rem;
+  cursor: pointer;
+  display: inline-block;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+.image-details button:active {
+  box-shadow: #000000 -0.01rem 0.01rem;
+  transform: translate(0px, 2px);
+}/*# sourceMappingURL=food-item.component.css.map */

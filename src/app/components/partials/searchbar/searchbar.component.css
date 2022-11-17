@@ -1,0 +1,47 @@
+* {
+  font-family: Vazir, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.btn-primary {
+  border: 1px solid #990100;
+  color: #990100;
+  border-radius: 0.4rem;
+  text-align: center;
+  width: 2rem;
+  font-size: 1.15em;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.container {
+  background-color: #e3e3e3;
+  margin: 0.5rem auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.3rem;
+  width: 100%;
+  max-width: 1200px;
+}
+.container input {
+  color: #797979;
+  border: none;
+  background-color: #e3e3e3;
+  width: 17rem;
+  outline: none;
+  font-size: 1em;
+  width: 100%;
+}
+.container i {
+  font-size: 1.5em;
+  color: #797979;
+  cursor: pointer;
+}/*# sourceMappingURL=searchbar.component.css.map */

@@ -1,0 +1,148 @@
+* {
+  font-family: Vazir, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.btn-primary {
+  border: 1px solid #990100;
+  color: #990100;
+  border-radius: 0.4rem;
+  text-align: center;
+  width: 2rem;
+  font-size: 1.15em;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.container {
+  position: fixed;
+  display: inline-block;
+  left: 50%;
+  right: 0%;
+  bottom: 15%;
+  width: 3.3rem;
+}
+.container .btn {
+  position: relative;
+  height: 50px;
+  margin: 10px 0;
+  padding: 7px 0 0 8px;
+  border: 1px solid #898989;
+  background: #ffdd7c;
+  box-shadow: #000000 -0.15rem 0.15rem;
+  overflow: hidden;
+  box-sizing: padding-box;
+  box-sizing: border-box;
+  border-radius: 0.2rem;
+}
+.container .btn-animation {
+  -webkit-animation: openBtn backwards 6s;
+          animation: openBtn backwards 6s;
+}
+.container .green {
+  background-color: rgb(85, 233, 85);
+}
+.container .btn span {
+  opacity: 0;
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-weight: 500;
+}
+.container .btn:hover span {
+  opacity: 1;
+  -webkit-animation: textAnim 6s forwards;
+          animation: textAnim 6s forwards;
+  pointer-events: none;
+}
+.container img {
+  margin-right: 0.5rem;
+}
+
+@-webkit-keyframes openBtn {
+  0% {
+    width: 50px;
+  }
+  10% {
+    width: 170px;
+  }
+  85% {
+    width: 170px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+
+@keyframes openBtn {
+  0% {
+    width: 50px;
+  }
+  10% {
+    width: 170px;
+  }
+  85% {
+    width: 170px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+@-webkit-keyframes textAnim {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  8% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  20% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  70% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@keyframes textAnim {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  8% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  20% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  70% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}/*# sourceMappingURL=call-waiter.component.css.map */

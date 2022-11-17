@@ -1,0 +1,97 @@
+@import "../../../styles.scss";
+.container {
+  position: fixed;
+  display: inline-block;
+  left: 50%;
+  right: 0%;
+  bottom: 8.5%;
+  width: 3.3rem;
+
+  .btn {
+    position: relative;
+    height: 50px;
+    margin: 10px 0;
+    padding: 7px 0 0 8px;
+    border: 1px solid #898989;
+    background: $call-waiter;
+    box-shadow: #000000 -0.15rem 0.15rem;
+    overflow: hidden;
+    box-sizing: padding-box;
+    box-sizing: border-box;
+
+    border-radius: 0.2rem;
+  }
+
+  .btn-animation {
+    animation: openBtn backwards 6s;
+  }
+
+  .green {
+    background-color: rgb(85, 233, 85);
+  }
+
+  .btn span {
+    opacity: 0;
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    font-weight: 500;
+  }
+
+  .btn:hover span {
+    opacity: 1;
+    animation: textAnim 6s forwards;
+    pointer-events: none;
+  }
+
+  img {
+    margin-right: 0.5rem;
+  }
+}
+
+@keyframes openBtn {
+  0% {
+    width: 50px;
+  }
+
+  10% {
+    width: 170px;
+  }
+
+  85% {
+    width: 170px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+
+@keyframes textAnim {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  8% {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  20% {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  70% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}

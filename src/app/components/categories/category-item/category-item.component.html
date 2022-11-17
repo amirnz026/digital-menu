@@ -1,0 +1,28 @@
+<div
+  class="container"
+  (click)="handleClick()"
+  [ngClass]="{ active: (isActive$ | async) === true }"
+  *ngIf="title != 'همه'; else allBlock"
+>
+  <div *ngIf="isActive$ | async" class="upper-bar"></div>
+  <div class="upper-bar"></div>
+
+  <img src="{{ imgSrc }}" alt="category" />
+  <p>{{ title }}</p>
+</div>
+
+<ng-template #allBlock>
+  <div
+    class="container"
+    [ngClass]="{
+      active: (areAllItemsShowing$ | async) === true && !(searchValue$ | async)
+    }"
+    (click)="handleClick()"
+  >
+    <div *ngIf="areAllItemsShowing$ | async" class="upper-bar"></div>
+    <div class="upper-bar"></div>
+
+    <img src="{{ imgSrc }}" alt="category" />
+    <p>{{ title }}</p>
+  </div>
+</ng-template>
