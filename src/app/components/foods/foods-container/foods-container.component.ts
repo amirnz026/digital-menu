@@ -22,6 +22,12 @@ import * as FoodsActions from '../../../store/actions';
   styleUrls: ['./foods-container.component.scss'],
 })
 export class FoodsContainerComponent implements OnInit {
+  public trigger: number = 0;
+
+  public rerender(): void {
+    this.trigger++;
+  }
+
   isLoading$: Observable<boolean>;
   error$: Observable<string | null>;
   foods$!: Observable<FoodInterface[]>;

@@ -3,7 +3,9 @@
   flex-direction: column;
   padding: 0 1rem 1rem 1rem;
   gap: 1rem;
-  margin: 16rem 0 4rem 0;
+  // margin: 16rem 0 4rem 0;
+  animation: openAnim 0.1s forwards;
+  z-index: 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -24,4 +26,13 @@
 }
 
 @media only screen and (min-width: 1200px) {
+}
+
+@keyframes openAnim {
+  0% {
+    margin: 14rem 0 4rem 0;
+  }
+  100% {
+    margin: 16rem 0 4rem 0;
+  }
 }
