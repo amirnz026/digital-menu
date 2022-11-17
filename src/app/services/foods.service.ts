@@ -1,12 +1,10 @@
-// import { categories, foodItems } from './data';
-
 import { Injectable } from '@angular/core';
 import { delay, map, Observable, of } from 'rxjs';
 import { FoodInterface } from '../types/food.interface';
 import { CategoryInterface } from '../types/category.interface';
 
 import { HttpClient } from '@angular/common/http';
-import '../../environments/';
+import { GET_ALL } from 'src/environments/envVariables';
 @Injectable()
 export class FoodsService {
   constructor(private http: HttpClient) {}
@@ -18,7 +16,7 @@ export class FoodsService {
     // const foods = foodItems;
 
     this.fetchedData$ = this.http
-      .get(environment.GET_ALL)
+      .get(GET_ALL)
       .pipe(map((data: any) => data.data));
 
     this.fetchedItems$ = this.fetchedData$.pipe(
