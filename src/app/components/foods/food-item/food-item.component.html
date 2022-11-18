@@ -39,7 +39,10 @@
     </ng-template>
   </div>
   <div class="image-details">
-    <img [src]="imgSrc[0]" (click)="onItemClick()" alt="" />
+    <!-- <img [src]="imgSrc[0]" (click)="onItemClick()" alt="" /> -->
+    <img #userImage [src]="imgSrc[0]" />
+    <img *ngIf="!userImage.complete" src="../../../../assets/icons/all.png" />
+
     <div *ngIf="itemQty$ | async as itemQty; else loggedOut">
       <div *ngIf="itemQty > 0; else loggedOut">
         <div class="add-remove-quantity-container">
