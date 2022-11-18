@@ -18,4 +18,8 @@ export class CategoriesContainerComponent implements OnInit {
   ngOnInit(): void {
     this.categories$ = this.store.pipe(select(getAllCategories()));
   }
+
+  goToTop(): void {
+    scrollTo(0, 0);
+  }
 }
