@@ -25,7 +25,7 @@
     flex-direction: column;
     justify-content: space-between;
     p {
-      font-size: 1.1em;
+      font-size: 1em;
       font-weight: 700;
     }
     .price {
@@ -60,7 +60,7 @@
 
         .main-price-number {
           font-weight: 300;
-          font-size: 1em;
+          font-size: 0.9em;
         }
       }
       .discount-price {
@@ -70,7 +70,7 @@
         color: $secondary-color;
         .discount-price-number {
           font-weight: 600;
-          font-size: 1.3em;
+          font-size: 1em;
           text-align: center;
         }
       }

@@ -9,6 +9,7 @@ import {
 import { AppStateInterface } from 'src/app/types/appState.interface';
 import { FoodInterface } from 'src/app/types/food.interface';
 import * as FoodsActions from '../../store/actions';
+import disableScroll from 'disable-scroll';
 
 @Component({
   selector: 'app-cart',
@@ -27,9 +28,11 @@ export class CartComponent implements OnInit {
     this.qtySum$ = this.store.pipe(select(qtySumSelector()));
     this.totalOrderPrice$ = this.store.pipe(select(totalOrderPriceSelector()));
     this.itemsInCart$ = this.store.pipe(select(getInCartItems()));
+    disableScroll.off();
   }
   handleClose(): void {
     this.store.dispatch(FoodsActions.hideCart());
+    disableScroll.off();
   }
 
   handleRecycleClick(): void {
