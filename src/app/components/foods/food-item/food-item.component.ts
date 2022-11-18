@@ -21,7 +21,6 @@ export class FoodItemComponent implements OnInit {
   @Input() quantity: number = 0;
   @Input() isAddedToCart: boolean = false;
   @Input() categories: string[] = [''];
-  lazyLoadImg = '../../../../assets/icons/lazyload.png';
   discountPercentage = 0;
 
   itemQty$!: Observable<number>;
@@ -45,7 +44,7 @@ export class FoodItemComponent implements OnInit {
 
   ngOnInit(): void {
     this.itemQty$ = this.store.pipe(select(getQtyById(this.foodId)));
-    this.ingredients = this.ingredients.slice(0, 3);
+    this.ingredients = this.ingredients.slice(0, 2);
 
     this.discountPercentage =
       (100 * (parseInt(this.price) - parseInt(this.discountPrice))) /

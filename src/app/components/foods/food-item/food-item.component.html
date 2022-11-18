@@ -39,8 +39,7 @@
     </ng-template>
   </div>
   <div class="image-details">
-    <!-- <img [src]="imgSrc[0]" (click)="onItemClick()" alt="" /> -->
-    <img [defaultImage]="lazyLoadImg" [lazyLoad]="imgSrc[0]" />
+    <img [src]="imgSrc[0]" (click)="onItemClick()" alt="" />
 
     <div *ngIf="itemQty$ | async as itemQty; else loggedOut">
       <div *ngIf="itemQty > 0; else loggedOut">

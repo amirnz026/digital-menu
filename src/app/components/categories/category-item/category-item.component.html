@@ -7,8 +7,7 @@
   <div *ngIf="isActive$ | async" class="upper-bar"></div>
   <div class="upper-bar"></div>
 
-  <!-- <img src="{{ imgSrc }}" alt="category" /> -->
-  <img [defaultImage]="lazyLoadImg" lazyLoad="{{ imgSrc }}" />
+  <img src="{{ imgSrc }}" alt="category" />
 
   <p>{{ title }}</p>
 </div>
