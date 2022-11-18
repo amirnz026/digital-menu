@@ -12,10 +12,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 0.7rem;
 
     .submit-message {
-      font-size: 1.3em;
+      font-size: 1em;
       font-weight: 700;
       color: green;
     }
@@ -24,10 +24,10 @@
       color: $icon-black;
       text-align: center;
       gap: 0.3rem;
-      padding: 0.8rem 1.7rem;
+      padding: 0.6rem 1.3rem;
       width: 100%;
       border-radius: 0.2rem;
-      font-size: 1em;
+      font-size: 0.7em;
       font-weight: 500;
       text-align: center;
       box-shadow: #000000 -0.15rem 0.15rem;
@@ -46,15 +46,15 @@
     bottom: 0;
     width: 100%;
     display: flex;
-    gap: 1.25rem;
+    gap: 0.9rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #f5f5f5;
-    padding: 1.5rem 0;
+    padding: 0.7rem 0;
 
     .satisfaction-text {
-      font-size: 1.1em;
+      font-size: 1em;
       font-weight: 700;
     }
 
@@ -65,7 +65,7 @@
       gap: 2rem;
 
       i {
-        font-size: 3.5rem;
+        font-size: 2.7rem;
       }
 
       .bx-sad {
@@ -94,7 +94,7 @@
 }
 
 i {
-  font-size: 2em;
+  font-size: 1.7em;
   color: $icon-black;
 }
 
