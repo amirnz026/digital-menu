@@ -32,6 +32,7 @@ export class FooterComponent implements OnInit {
   }
   handleClick(): void {
     this.store.dispatch(FoodsActions.showCart());
+    this.store.dispatch(FoodsActions.hideDetails());
   }
 
   toPersianNumeral(en: string | number | null) {
