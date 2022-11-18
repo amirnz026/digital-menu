@@ -16,6 +16,7 @@ export class CartItemComponent implements OnInit {
   @Input() foodQty: string = '';
   @Input() imgSrc: string = '';
   @Input() foodId: string = '';
+
   discountPercentage = 0;
 
   itemQty$!: Observable<number>;

@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgxRerenderModule } from 'ngx-rerender';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { HeaderComponent } from './components/partials/header/header.component';
 import { SearchbarComponent } from './components/partials/searchbar/searchbar.component';
@@ -67,6 +68,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HttpClientModule,
     AppRoutingModule,
     NgxRerenderModule,
+    LazyLoadImageModule,
     StoreModule.forRoot({}),
     StoreModule.forFeature('foods', reducers),
     EffectsModule.forFeature([FoodsEffects]),

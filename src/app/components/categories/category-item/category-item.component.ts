@@ -22,6 +22,7 @@ export class CategoryItemComponent implements OnInit {
   isActive$!: Observable<boolean>;
   areAllItemsShowing$!: Observable<boolean>;
   searchValue$!: Observable<string>;
+  lazyLoadImg = '../../../../assets/icons/lazyload.png';
 
   constructor(private store: Store<AppStateInterface>) {}
 

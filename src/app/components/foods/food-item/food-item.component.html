@@ -40,8 +40,7 @@
   </div>
   <div class="image-details">
     <!-- <img [src]="imgSrc[0]" (click)="onItemClick()" alt="" /> -->
-    <img #userImage [src]="imgSrc[0]" />
-    <img *ngIf="!userImage.complete" src="../../../../assets/icons/all.png" />
+    <img [defaultImage]="lazyLoadImg" [lazyLoad]="imgSrc[0]" />
 
     <div *ngIf="itemQty$ | async as itemQty; else loggedOut">
       <div *ngIf="itemQty > 0; else loggedOut">

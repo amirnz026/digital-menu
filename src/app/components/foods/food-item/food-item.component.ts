@@ -21,6 +21,7 @@ export class FoodItemComponent implements OnInit {
   @Input() quantity: number = 0;
   @Input() isAddedToCart: boolean = false;
   @Input() categories: string[] = [''];
+  lazyLoadImg = '../../../../assets/icons/lazyload.png';
   discountPercentage = 0;
 
   itemQty$!: Observable<number>;
