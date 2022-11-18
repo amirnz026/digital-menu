@@ -131,3 +131,21 @@
 .bx-x {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 321px) {
+  .add-remove-quantity-container {
+    gap: 0.2rem;
+  }
+  .container {
+    padding: 0.3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}

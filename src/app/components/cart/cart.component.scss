@@ -119,7 +119,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 50vh;
+  min-height: 35vh;
 
   gap: 1rem;
 
@@ -153,4 +153,18 @@
 
 .bx-chevron-down {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 321px) {
+  .container {
+    textarea {
+      padding: 0.1rem 1rem 0.1rem 0;
+      margin-top: 0.4rem;
+    }
+
+    .items-container {
+      gap: 0.2rem;
+      max-height: 14.5rem;
+    }
+  }
 }

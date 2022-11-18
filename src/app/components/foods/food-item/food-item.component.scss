@@ -165,3 +165,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 321px) {
+  .container {
+    .text-details {
+      .title {
+        font-size: 1em;
+        margin-bottom: 0.2rem;
+      }
+    }
+  }
+}
