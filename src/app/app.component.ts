@@ -42,7 +42,7 @@ export class AppComponent {
   isTransactionFooter = false;
   isPending = false;
   isSucceeded = false;
-  isSplashShowing = true;
+  isSplashShowing = false;
 
   constructor(private store: Store<AppStateInterface>) {}
 
