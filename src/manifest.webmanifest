@@ -1,7 +1,8 @@
 {
-  "name": "foodmenu",
-  "short_name": "foodmenu",
+  "name": "Yaghout Digital Menu",
+  "short_name": "Yaghout",
   "theme_color": "#1976d2",
+  "version": "1.5.2",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",
