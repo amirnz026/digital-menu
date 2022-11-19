@@ -40,6 +40,9 @@ export class CartItemComponent implements OnInit {
       return '۰۱۲۳۴۵۶۷۸۹'.slice(+t, +t + 1);
     });
   }
+  numberWithCommas(x: number | string) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
 
   emptyCartItemById(): void {
     this.store.dispatch(FoodsActions.emptyCartItemById({ id: this.foodId }));

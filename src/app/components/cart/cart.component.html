@@ -34,11 +34,19 @@
     </div>
     <div class="left">
       <p class="receipt-price all">
-        <span>{{ toPersianNumeral(totalOrderPrice$ | async) }}</span
+        <span>{{
+          toPersianNumeral(numberWithCommas(totalOrderPrice$ | async))
+        }}</span
         >تومان
       </p>
-      <p class="receipt-price"><span>۳۰۰۰۰</span>تومان</p>
-      <p class="receipt-price"><span>۵۰۰۰۰</span>تومان</p>
+      <p class="receipt-price">
+        <span>{{ toPersianNumeral(numberWithCommas(30000)) }}</span
+        >تومان
+      </p>
+      <p class="receipt-price">
+        <span>{{ toPersianNumeral(numberWithCommas(50000)) }}</span
+        >تومان
+      </p>
     </div>
   </div>
 </div>

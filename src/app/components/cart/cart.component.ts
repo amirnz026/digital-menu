@@ -44,4 +44,8 @@ export class CartComponent implements OnInit {
       return '۰۱۲۳۴۵۶۷۸۹'.slice(+t, +t + 1);
     });
   }
+  numberWithCommas(x: number | string | null) {
+    if (typeof x === undefined || x === null) return x;
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
 }
