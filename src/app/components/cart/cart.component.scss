@@ -155,16 +155,48 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width: 321px) {
+@media only screen and (max-width: 375px) {
   .container {
     textarea {
       padding: 0.1rem 1rem 0.1rem 0;
+      height: 3.5rem;
       margin-top: 0.4rem;
     }
 
     .items-container {
       gap: 0.2rem;
-      max-height: 14.5rem;
+      max-height: 13.5rem;
+    }
+
+    .receipt {
+      padding: 0.2rem 0.5rem;
+      .left {
+        gap: 0.2rem;
+
+        .all {
+          color: green;
+          font-size: 0.9em;
+          font-weight: 600;
+        }
+        .receipt-price {
+          display: flex;
+          justify-content: space-between;
+          gap: 0.5rem;
+          align-items: flex-start;
+          font-size: 0.9em;
+        }
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.9em;
+        gap: 0.2rem;
+        .all {
+          color: green;
+          font-size: 0.9em;
+          font-weight: 600;
+        }
+      }
     }
   }
 }

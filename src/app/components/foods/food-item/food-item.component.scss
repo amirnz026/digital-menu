@@ -95,14 +95,6 @@
   align-items: flex-end;
   gap: 0.8rem;
 
-  // .img-bg {
-  //   background-color: red;
-  //   display: inline-block;
-  //   width: 100px;
-  //   height: 100px;
-  //   margin: auto;
-  // }
-
   img {
     width: 7rem;
     height: 60%;
@@ -118,6 +110,7 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    height: 2.165rem;
 
     div {
       border: 1px solid $primary-color;
