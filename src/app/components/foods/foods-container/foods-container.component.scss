@@ -4,7 +4,7 @@
   padding: 0 1rem 1rem 1rem;
   gap: 1rem;
   // margin: 16rem 0 4rem 0;
-  animation: openAnim 0.1s forwards;
+  animation: openAnim 0.25s forwards;
   z-index: 0;
 }
 
@@ -30,7 +30,7 @@
 
 @keyframes openAnim {
   0% {
-    margin: 14rem 0 4rem 0;
+    margin: 10rem 0 4rem 0;
   }
   100% {
     margin: 16rem 0 4rem 0;
