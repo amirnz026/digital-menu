@@ -5,6 +5,7 @@ import { CategoryInterface } from '../types/category.interface';
 
 import { HttpClient } from '@angular/common/http';
 import { GET_ALL } from 'src/environments/envVariables';
+import { mockApi } from './data';
 @Injectable()
 export class FoodsService {
   constructor(private http: HttpClient) {}
@@ -15,9 +16,13 @@ export class FoodsService {
   getFoods(): Observable<FoodInterface[]> {
     // const foods = foodItems;
 
-    this.fetchedData$ = this.http
-      .get(GET_ALL)
-      .pipe(map((data: any) => data.data));
+    // main backend
+    // this.fetchedData$ = this.http
+    //   .get(GET_ALL)
+    //   .pipe(map((data: any) => data.data));
+
+    // mock backend
+    this.fetchedData$ = of(mockApi.data);
 
     this.fetchedItems$ = this.fetchedData$.pipe(
       map((item: any) =>
@@ -44,13 +49,11 @@ export class FoodsService {
   }
 
   getAllCategories(shopType: string): Observable<CategoryInterface[]> {
-    // mock data
     // let fetchedCategories = categories;
     // fetchedCategories = fetchedCategories.filter(
     //   (category) => category.shopType === shopType
     // );
 
-    // backend data
     this.fetchedCategories$ = this.fetchedData$.pipe(
       map((data: any) =>
         data.categories.map((category: any) => {
@@ -71,12 +74,3 @@ export class FoodsService {
     return of(true).pipe(delay(1500));
   }
 }
-
-// setCookie(name: string, value: string, expireDays: number, path: string = '') {
-//   const d: Date = new Date();
-//   d.setTime(d.getTime() + expireDays * 24 * 60 * 60 * 1000);
-//   const expires = `expires=${d.toUTCString()}`;
-//   const cpath = path ? `; path=${path}` : '';
-//   document.cookie = `${name}=${value}; ${expires}${cpath};SameSite=Strict;secure`;
-// }
-// }
