@@ -44,11 +44,13 @@ export class FoodsService {
   }
 
   getAllCategories(shopType: string): Observable<CategoryInterface[]> {
+    // mock data
     // let fetchedCategories = categories;
     // fetchedCategories = fetchedCategories.filter(
     //   (category) => category.shopType === shopType
     // );
 
+    // backend data
     this.fetchedCategories$ = this.fetchedData$.pipe(
       map((data: any) =>
         data.categories.map((category: any) => {
