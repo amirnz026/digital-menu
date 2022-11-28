@@ -14,8 +14,6 @@ export class FoodsService {
   fetchedCategories$!: Observable<CategoryInterface[]>;
 
   getFoods(): Observable<FoodInterface[]> {
-    // const foods = foodItems;
-
     // main backend
     // this.fetchedData$ = this.http
     //   .get(GET_ALL)
