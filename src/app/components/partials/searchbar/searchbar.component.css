@@ -44,4 +44,8 @@ li {
   font-size: 1.5em;
   color: #797979;
   cursor: pointer;
+}
+.container button {
+  visibility: none;
+  opacity: 0;
 }/*# sourceMappingURL=searchbar.component.css.map */

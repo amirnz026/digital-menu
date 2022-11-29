@@ -23,9 +23,7 @@ li {
 .container {
   position: fixed;
   display: inline-block;
-  left: 50%;
-  right: 0%;
-  bottom: 15%;
+  bottom: 4.5rem;
   width: 3.3rem;
 }
 .container .btn {

@@ -48,9 +48,9 @@ li {
 }
 
 .active {
-  height: 8rem;
-  width: 5.9rem;
   position: relative;
+  -webkit-animation: activeCatAnim 0.25s forwards;
+          animation: activeCatAnim 0.25s forwards;
 }
 .active p {
   font-weight: 600;
@@ -62,4 +62,26 @@ li {
   border-radius: 0.3rem 0.3rem 0 0;
   width: 100%;
   height: 0.55rem;
+}
+
+@-webkit-keyframes activeCatAnim {
+  0% {
+    height: 7rem;
+    width: 5.5rem;
+  }
+  100% {
+    height: 8rem;
+    width: 5.9rem;
+  }
+}
+
+@keyframes activeCatAnim {
+  0% {
+    height: 7rem;
+    width: 5.5rem;
+  }
+  100% {
+    height: 8rem;
+    width: 5.9rem;
+  }
 }/*# sourceMappingURL=category-item.component.css.map */

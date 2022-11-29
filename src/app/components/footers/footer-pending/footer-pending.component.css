@@ -184,4 +184,9 @@ li {
   100%, 0% {
     transform: scale(1);
   }
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0.8rem 1rem;
+  }
 }/*# sourceMappingURL=footer-pending.component.css.map */

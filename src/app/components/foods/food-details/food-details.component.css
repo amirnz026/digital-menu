@@ -41,7 +41,7 @@ li {
   width: 100%;
   background-color: white;
   padding: 0.5rem 1rem;
-  padding-bottom: 5rem;
+  padding-bottom: 4.45rem;
   border-radius: 1.2rem 1.2rem 0 0;
   -webkit-animation: openMenuAnim 0.3s forwards;
           animation: openMenuAnim 0.3s forwards;
@@ -76,25 +76,25 @@ li {
 }
 .container .image-slider-container .left-arrow {
   position: absolute;
-  font-size: 3em;
+  font-size: 2.5em;
   color: white;
-  top: 39%;
+  top: 32%;
   left: 0;
   cursor: pointer;
 }
 .container .image-slider-container img {
-  margin-top: 0.8rem;
   width: 100%;
-  height: 14rem;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 9rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: white;
   border-radius: 0.4rem;
 }
 .container .image-slider-container .right-arrow {
   position: absolute;
-  font-size: 3em;
+  font-size: 2.5em;
   color: white;
-  top: 39%;
+  top: 32%;
   right: 0;
   cursor: pointer;
 }
@@ -104,18 +104,19 @@ li {
   color: #2c2c2c;
 }
 .container .ingredients-container {
+  margin-top: 0.1rem;
   display: flex;
   flex-wrap: wrap;
 }
 .container .ingredients-container .ingredients {
-  margin-top: 0.65rem;
+  margin-top: 0.2rem;
   color: #797979;
 }
 .container hr {
   border: 0px;
   border-top: 1px solid #e3e3e3;
   width: 90%;
-  margin: 1.4rem auto;
+  margin: 1rem auto;
 }
 .container .price-container {
   display: flex;
@@ -142,6 +143,53 @@ li {
 }
 .container .price-container .add-remove-quantity-container p {
   font-weight: 500;
+}
+.container .price-container .price-holder {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: #008484;
+}
+.container .price-container .price-holder .price {
+  font-weight: 600;
+  font-size: 1.3em;
+  text-align: center;
+}
+.container .price-container .discount-container {
+  display: flex;
+  flex-direction: column;
+}
+.container .price-container .discount-container .main-price {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: #a3a3a3;
+  -webkit-text-decoration: line-through rgba(163, 163, 163, 0.6117647059);
+          text-decoration: line-through rgba(163, 163, 163, 0.6117647059);
+}
+.container .price-container .discount-container .main-price .main-price-number {
+  font-weight: 300;
+  font-size: 1em;
+}
+.container .price-container .discount-container .discount-price {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: #008484;
+}
+.container .price-container .discount-container .discount-price .discount-price-number {
+  font-weight: 600;
+  font-size: 1.3em;
+  text-align: center;
+}
+.container .price-container .off-container .off-percentage {
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+  margin-right: 0.1rem;
+  background-color: #ef394e;
+  border-radius: 0.5rem;
+  padding: 0rem 0.3rem;
 }
 
 @-webkit-keyframes openMenuAnim {

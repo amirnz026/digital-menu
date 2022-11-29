@@ -62,6 +62,44 @@ li {
   text-align: center;
 }
 
+.discount-container {
+  display: flex;
+  flex-direction: column;
+}
+.discount-container .main-price {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: #a3a3a3;
+  -webkit-text-decoration: line-through rgba(163, 163, 163, 0.6117647059);
+          text-decoration: line-through rgba(163, 163, 163, 0.6117647059);
+}
+.discount-container .main-price .main-price-number {
+  font-weight: 300;
+  font-size: 1em;
+}
+.discount-container .discount-price {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: #008484;
+}
+.discount-container .discount-price .discount-price-number {
+  font-weight: 600;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.off-container .off-percentage {
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+  margin-right: 0.1rem;
+  background-color: #ef394e;
+  border-radius: 0.5rem;
+  padding: 0rem 0.3rem;
+}
+
 .image-details {
   flex: 1;
   display: flex;
@@ -74,8 +112,9 @@ li {
 .image-details img {
   width: 7rem;
   height: 60%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: white;
   border-radius: 0.3rem;
 }
 .image-details .add-remove-quantity-container {
@@ -84,6 +123,7 @@ li {
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  height: 2.165rem;
 }
 .image-details .add-remove-quantity-container div {
   border: 1px solid #990100;
@@ -124,4 +164,11 @@ li {
 .image-details button:active {
   box-shadow: #000000 -0.01rem 0.01rem;
   transform: translate(0px, 2px);
+}
+
+@media only screen and (max-width: 321px) {
+  .container .text-details .title {
+    font-size: 1em;
+    margin-bottom: 0.2rem;
+  }
 }/*# sourceMappingURL=food-item.component.css.map */

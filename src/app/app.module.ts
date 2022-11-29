@@ -35,6 +35,7 @@ import { FoodItemLoaderComponent } from './components/foods/food-item/food-item-
 import { CategoriesContainerLoaderComponent } from './components/categories/categories-container/categories-container-loader/categories-container-loader.component';
 import { CategoryItemLoaderComponent } from './components/categories/category-item/category-item-loader/category-item-loader.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [

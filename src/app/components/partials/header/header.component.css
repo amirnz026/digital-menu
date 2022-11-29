@@ -23,16 +23,16 @@ li {
 .nav-container {
   background-color: #990100;
   padding: 0.5rem 0;
-  display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
+  display: flex;
+  justify-content: center;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 .nav-container .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   text-align: center;
+  justify-content: center;
   align-items: center;
   color: #f6f6f6;
 }

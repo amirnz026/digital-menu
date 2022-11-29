@@ -57,4 +57,10 @@ li {
 .container i {
   font-size: 1.5em;
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0.8rem 1rem;
+  }
 }/*# sourceMappingURL=footer-submit.component.css.map */

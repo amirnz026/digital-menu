@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as FoodsActions from './store/actions';
@@ -43,10 +44,16 @@ export class AppComponent {
   isPending = false;
   isSucceeded = false;
   isSplashShowing = true;
+  isOnline = false;
 
-  constructor(private store: Store<AppStateInterface>) {}
+  constructor(
+    private store: Store<AppStateInterface>,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
+    this.isOnline = window.navigator.onLine;
+
     this.store.dispatch(FoodsActions.getFoods());
     this.currentShop$ = this.store.pipe(select(shopSelector()));
 

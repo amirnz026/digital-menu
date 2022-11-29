@@ -1,8 +1,8 @@
 {
-  "name": "Yaghout Digital Menu",
-  "short_name": "Yaghout",
+  "name": "پیتزا یاقوت",
+  "short_name": "پیتزا یاقوت",
   "theme_color": "#1976d2",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",

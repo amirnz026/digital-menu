@@ -3,7 +3,9 @@
   flex-direction: column;
   padding: 0 1rem 1rem 1rem;
   gap: 1rem;
-  margin: 16rem 0 4rem 0;
+  -webkit-animation: openAnim 0.25s forwards;
+          animation: openAnim 0.25s forwards;
+  z-index: 0;
 }
 
 @media only screen and (min-width: 600px) {
@@ -16,5 +18,21 @@
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@-webkit-keyframes openAnim {
+  0% {
+    margin: 10rem 0 4rem 0;
+  }
+  100% {
+    margin: 16rem 0 4rem 0;
+  }
+}
+@keyframes openAnim {
+  0% {
+    margin: 10rem 0 4rem 0;
+  }
+  100% {
+    margin: 16rem 0 4rem 0;
   }
 }/*# sourceMappingURL=foods-container.component.css.map */

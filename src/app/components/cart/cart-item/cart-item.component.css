@@ -1,39 +1,3 @@
-@font-face {
-  font-family: "Vazir";
-  src: url("./assets//fonts/Vazirmatn-Thin.woff2") format("woff2");
-  font-weight: 100;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Vazir";
-  src: url("./assets//fonts/Vazirmatn-Light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Vazir";
-  src: url("./assets//fonts/Vazirmatn-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Vazir";
-  src: url("./assets//fonts/Vazirmatn-SemiBold.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Vazir";
-  src: url("./assets//fonts/Vazirmatn-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Vazir";
-  src: url("./assets/fonts/Vazirmatn-ExtraBold.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-}
 * {
   font-family: Vazir, sans-serif;
   margin: 0;
@@ -60,7 +24,7 @@ li {
   display: flex;
   border-radius: 0.3rem;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.7rem;
   background-color: white;
 }
 .container .img-holder {
@@ -70,8 +34,9 @@ li {
   flex: 1;
   width: 100%;
   height: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: white;
   border-radius: 0.3rem;
 }
 .container .text-details {
@@ -81,7 +46,7 @@ li {
   justify-content: space-between;
 }
 .container .text-details p {
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 700;
 }
 .container .text-details .price {
@@ -90,6 +55,53 @@ li {
 .container .text-details .price span {
   font-weight: 600;
   font-size: 1em;
+}
+.container .text-details .price-container {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: #008484;
+}
+.container .text-details .price-container .price {
+  font-weight: 600;
+  font-size: 1.3em;
+  text-align: center;
+}
+.container .text-details .discount-container {
+  display: flex;
+  flex-direction: column;
+}
+.container .text-details .discount-container .main-price {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: #a3a3a3;
+  -webkit-text-decoration: line-through rgba(163, 163, 163, 0.6117647059);
+          text-decoration: line-through rgba(163, 163, 163, 0.6117647059);
+}
+.container .text-details .discount-container .main-price .main-price-number {
+  font-weight: 300;
+  font-size: 0.9em;
+}
+.container .text-details .discount-container .discount-price {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+  color: #008484;
+}
+.container .text-details .discount-container .discount-price .discount-price-number {
+  font-weight: 600;
+  font-size: 1em;
+  text-align: center;
+}
+.container .text-details .off-container .off-percentage {
+  color: white;
+  font-size: 0.8em;
+  text-align: center;
+  margin-right: 0.1rem;
+  background-color: #ef394e;
+  border-radius: 0.5rem;
+  padding: 0rem 0.3rem;
 }
 .container .last-column {
   display: flex;
@@ -109,14 +121,30 @@ li {
 
 .add-remove-quantity-container {
   display: flex;
-  gap: 0.7rem;
+  gap: 0.5rem;
   justify-content: center;
   align-items: center;
 }
 .add-remove-quantity-container p {
   font-weight: 500;
+  width: 1rem;
+  text-align: center;
+  margin: 0 auto;
 }
 .add-remove-quantity-container .inactive {
   color: #797979;
   border: 1px solid #797979;
+}
+
+.bx-x {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 321px) {
+  .add-remove-quantity-container {
+    gap: 0.2rem;
+  }
+  .container {
+    padding: 0.3rem;
+  }
 }/*# sourceMappingURL=cart-item.component.css.map */
