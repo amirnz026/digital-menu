@@ -15,12 +15,12 @@ export class FoodsService {
 
   getFoods(): Observable<FoodInterface[]> {
     // main backend
-    // this.fetchedData$ = this.http
-    //   .get(GET_ALL)
-    //   .pipe(map((data: any) => data.data));
+    this.fetchedData$ = this.http
+      .get(GET_ALL)
+      .pipe(map((data: any) => data.data));
 
     // mock backend
-    this.fetchedData$ = of(mockApi.data);
+    // this.fetchedData$ = of(mockApi.data);
 
     this.fetchedItems$ = this.fetchedData$.pipe(
       map((item: any) =>
