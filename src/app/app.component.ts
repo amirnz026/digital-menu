@@ -46,10 +46,7 @@ export class AppComponent {
   isSplashShowing = true;
   isOnline = false;
 
-  constructor(
-    private store: Store<AppStateInterface>,
-    private router: Router
-  ) {}
+  constructor(private store: Store<AppStateInterface>) {}
 
   ngOnInit(): void {
     this.isOnline = window.navigator.onLine;
